@@ -78,7 +78,7 @@ img{
 }
 
 .well.fondo-negro{
-    background-color:#080808;
-    background: #080808;
+    background-color:#222;
+    border-color: #080808;
     color:white;
 }

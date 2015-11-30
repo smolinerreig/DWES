@@ -111,7 +111,7 @@ $juego = new Juego();
                 <div class="row">
                     <div class="col-md-6">
                         <?php if ($juego->isEqual() != 'Eres un burro') { ?>
-                            <div class="well">
+                            <div class="well fondo-negro">
                                 <div class="row valign-wrapper">
                                     <div class="col-md-6"><h2 class="exito">¡Eres el amo!</h2> </div>
                                     <div class="col-md-6"><h3 class="pull-right">Te sumo <?php echo $punt = rand(2, 10) ?> puntos</h3></div>   
@@ -119,7 +119,7 @@ $juego = new Juego();
                             </div>
                             <?php $_SESSION['jugador']->puntuacion = $_SESSION['jugador']->puntuacion + $punt ?>
                         <?php } else { ?>
-                            <div class="well">
+                            <div class="well fondo-negro">
                                 <div class="row valign-wrapper">
                                     <div class="col-md-6"><h2 class="error">¡Eres un burro!</h2> </div>
                                     <div class="col-md-6"><h3 class="pull-right">Te resto <?php echo $punt = rand(2, 5) ?> puntos</h3></div>   
@@ -131,7 +131,7 @@ $juego = new Juego();
                     <div class="col-md-6">
                         <div class="row  valign-wrapper">
                             <div class="col-xs-12 ">
-                                <div class="well text-center"><h2>¿Quieres volver a intentarlo?</h2></div>
+                                <div class="well fondo-negro text-center"><h2>¿Quieres volver a intentarlo?</h2></div>
                             </div>
                         </div>
                         <div class="row">
