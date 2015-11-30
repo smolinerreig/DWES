@@ -69,15 +69,16 @@ img{
     color:#00cc00;
 }
 
-.well{
-    background-color:#080808;
-    color:white;
-}
-
 .verde {
     color:#009966;
 }
 
 .icono {
     width: auto; 
+}
+
+.well.fondo-negro{
+    background-color:#080808;
+    background: #080808;
+    color:white;
 }

@@ -1,25 +1,13 @@
 <html>
-    <head>
-        <title>Math Dice</title>
-        <?php include 'modelos/jugador.php'; ?>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" >
-        <link rel="stylesheet" href="css/style.css">
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"  integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-    </head>
+    <?php include 'parciales/head.php';?>
     <body>
         <div class="row">
             <div class="col-md-12 text-center">
-                
                 <h1 >MATH_DICE</h1>
-                
             </div>
         </div>
         <div class="col-md-6 col-md-offset-3 col-xs-12">
-            <div class="well">
+            <div class="well fondo-negro">
                 <form enctype="multipart/form-data" action="index.php" method="POST">
                     <div>
                         <div class="form-group">

@@ -16,7 +16,7 @@ include 'parciales/include.php';
             ?>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="well">
+                    <div class="well fondo-negro">
                         <form enctype="multipart/form-data" action="datos.php" method="POST">
                             <div>
                                 <div class="form-group">
