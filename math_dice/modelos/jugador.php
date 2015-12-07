@@ -6,12 +6,14 @@ class Jugador {
     public $apellidos;
     public $edad;
     public $puntuacion;
+    public $sexo;
 
-    function __construct($nombre, $apellidos, $edad, $puntuacion) {
+    function __construct($nombre, $apellidos, $edad, $puntuacion, $sexo) {
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->edad = $edad;
         $this->puntuacion = $puntuacion;
+        $this->sexo = $sexo;
     }
 
     function getNombre() {
@@ -44,10 +46,6 @@ class Jugador {
 
     function setPuntuacion($puntuacion) {
         $this->puntuacion = $puntuacion;
-    }
-
-    function addPoints($points) {
-        $this->puntuacion = $this->puntuacion + $points;
     }
 
 }

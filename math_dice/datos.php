@@ -30,7 +30,19 @@ include 'parciales/include.php';
                                 <div class="form-group">
                                     <label for="num2">Edad</label>
                                     <input type="text" name="edad" class="form-control" id="edad" value=<?php echo $_SESSION['jugador']->edad; ?>>
-                                </div>                            
+                                </div>    
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="sexo" id="hombre" value="hombre" checked>
+                                        Hombre
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="sexo" id="mujer" value="mujer">
+                                        Mujer
+                                    </label>
+                                </div> 
                                 <div class="text-center"><button type="submit" class="btn btn-success btn-lg" action="datos.php">Cambiar datos</button></div>
                             </div>
                         </form>

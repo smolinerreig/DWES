@@ -3,7 +3,7 @@ include 'parciales/include.php';
 ?>
 <html>
     <?php include 'parciales/head.php'; ?>
-    <body>
+    <body>  
         <div class="container">
             <?php
             require_once 'parciales/menu.php';

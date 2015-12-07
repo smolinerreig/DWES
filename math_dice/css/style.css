@@ -82,3 +82,7 @@ img{
     border-color: #080808;
     color:white;
 }
+
+.error {
+    color: #ff0000;
+}
