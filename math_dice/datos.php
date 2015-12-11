@@ -1,10 +1,14 @@
 <?php
 include 'parciales/include.php';
 ?>
-<?php if ($_POST['nombre'] && $_POST['apellidos'] && $_POST['edad']) {
+<?php /*echo '<pre>';
+print_r($_SESSION['jugador']);
+exit;*/ ?>
+<?php if ($_POST['nombre'] && $_POST['apellidos'] && $_POST['edad'] && $_POST['sexo']) {
     $_SESSION['jugador']->nombre = $_POST['nombre'];
     $_SESSION['jugador']->apellidos = $_POST['apellidos'];
     $_SESSION['jugador']->edad = $_POST['edad'];
+    $_SESSION['jugador']->sexo = $_POST['sexo'];
 }
 ?>
 <html>
@@ -33,13 +37,13 @@ include 'parciales/include.php';
                                 </div>    
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="sexo" id="hombre" value="hombre" checked>
+                                        <input type="radio" name="sexo" id="hombre" value="Hombre" <?php if( $_SESSION['jugador']->sexo=="Hombre"){echo "checked";}?>>
                                         Hombre
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="sexo" id="mujer" value="mujer">
+                                        <input type="radio" name="sexo" id="mujer" value="Mujer" <?php if( $_SESSION['jugador']->sexo=="Mujer"){echo "checked";}?>>
                                         Mujer
                                     </label>
                                 </div> 

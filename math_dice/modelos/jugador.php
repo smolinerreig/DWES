@@ -2,13 +2,15 @@
 
 class Jugador {
 
+    public $id;
     public $nombre;
     public $apellidos;
     public $edad;
     public $puntuacion;
     public $sexo;
 
-    function __construct($nombre, $apellidos, $edad, $puntuacion, $sexo) {
+    function __construct($id, $nombre, $apellidos, $edad, $puntuacion, $sexo) {
+        $this->id=$id;
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->edad = $edad;

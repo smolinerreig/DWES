@@ -30,13 +30,13 @@
                         </div>     
                         <div class="radio">
                           <label>
-                            <input type="radio" name="sexo" id="hombre" value="hombre" checked>
+                            <input type="radio" name="sexo" id="hombre" value="Hombre" checked>
                             Hombre
                           </label>
                         </div>
                         <div class="radio">
                           <label>
-                            <input type="radio" name="sexo" id="mujer" value="mujer">
+                            <input type="radio" name="sexo" id="mujer" value="Mujer">
                             Mujer
                           </label>
                         </div> 

@@ -7,15 +7,23 @@ if ($_GET['nuevo'] == 1){
 }
 
 if ($_GET['s'] == 'down') {
-    session_destroy();
-    header('Location: login.php');
+/*
+    $db = new Database();
+    $res=$db->actualizarUsuario($_SESSION['jugador']->id,$_SESSION['jugador']->nombre,$_SESSION['jugador']->apellidos,
+    $_SESSION['jugador']->edad,$_SESSION['jugador']->sexo,$_SESSION['jugador']->puntos);
+*/
+    //if(count($res)!=0){
+        session_destroy();
+        header('Location: login.php');
+    //}
+    
 } else {
     if ($_POST['nombre']) {
         $db = new Database();
         $res=$db->consulta('select * from usuario where nombre="'.$_POST['nombre'].'"');
         $jug=$db->getDatosUsuario($_POST['nombre']);
         if (count($res)!=0){
-            $jugador = new Jugador($jug['nombre'], $jug['apellidos'], $jug['edad'], $jug['puntos'], $jug['sexo']);
+            $jugador = new Jugador($jug['id'], $jug['nombre'], $jug['apellidos'], $jug['edad'], $jug['puntos'], $jug['sexo']);
             $_SESSION['jugador'] = $jugador;
         }else{
             header('Location: nuevo_usuario.php');

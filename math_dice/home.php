@@ -1,6 +1,7 @@
 <?php
 include 'parciales/include.php';
 ?>
+
 <html>
     <?php include 'parciales/head.php'; ?>
     <body>  
