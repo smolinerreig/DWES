@@ -117,7 +117,11 @@ $juego = new Juego();
                                     <div class="col-md-6"><h3 class="pull-right">Te sumo <?php echo $punt = rand(2, 10) ?> puntos</h3></div>   
                                 </div>
                             </div>
-                            <?php $_SESSION['jugador']->puntuacion = $_SESSION['jugador']->puntuacion + $punt ?>
+                            <?php 
+                                $_SESSION['jugador']->puntuacion = $_SESSION['jugador']->puntuacion + $punt;
+                                $db = new Database();
+                                $db->sumarPuntos($_SESSION['jugador']->id, $punt);
+                            ?>
                         <?php } else { ?>
                             <div class="well fondo-negro">
                                 <div class="row valign-wrapper">
@@ -125,7 +129,11 @@ $juego = new Juego();
                                     <div class="col-md-6"><h3 class="pull-right">Te resto <?php echo $punt = rand(2, 5) ?> puntos</h3></div>   
                                 </div>
                             </div>
-                            <?php $_SESSION['jugador']->puntuacion = $_SESSION['jugador']->puntuacion - $punt; ?>
+                            <?php 
+                            $_SESSION['jugador']->puntuacion = $_SESSION['jugador']->puntuacion - $punt; 
+                            $db = new Database();
+                            $db->sumarPuntos($_SESSION['jugador']->id, $punt*(-1));
+                            ?>
                         <?php } ?>
                     </div>
                     <div class="col-md-6">

@@ -9,6 +9,9 @@ exit;*/ ?>
     $_SESSION['jugador']->apellidos = $_POST['apellidos'];
     $_SESSION['jugador']->edad = $_POST['edad'];
     $_SESSION['jugador']->sexo = $_POST['sexo'];
+    
+    $db = new Database();
+    $db->actualizarDatosUsuario($_SESSION['jugador']->id); 
 }
 ?>
 <html>

@@ -33,18 +33,19 @@ class Database {
         VALUES (NULL, "'.$nombre.'", "'.$apellidos.'", "'.$edad.'", "'.$sexo.'", 0)');
     }
     
-    function sumarPuntos($nombre, $punt){
-        $res=$this->consulta('select puntos from usuario where nombre= "'.$nombre.'"');
+    function sumarPuntos($id, $punt){
+        $res=$this->consulta('select puntos from usuario where id= "'.$id.'"');
         $puntosBase=$res[0]['puntos'];
         $puntos=$puntosBase+$punt;
         // retorna 1 si todo ha ido bien
-        return $this->conexion->query('UPDATE usuario SET puntos ='.$puntos.' WHERE nombre = "'.$nombre.'";');
+        return $this->conexion->query('UPDATE usuario SET puntos ='.$puntos.' WHERE id = "'.$id.'";');
     }
     
-    function actualizarUsuario($id, $nombre, $apellidos, $edad, $sexo, $puntos){
-        return $this->conexion->query('UPDATE math_dice.usuario SET puntos ='.$puntos.',
-        nombre = "'.$nombre.'", apellidos = "'.$apellidos.'", edad='.$edad.', sexo="'.$sexo.'" WHERE id = "'.$id.'";');
+    function actualizarDatosUsuario($id){
+        $jug = $_SESSION['jugador'];
+        return $this->conexion->query('UPDATE usuario SET nombre ="'.$jug->nombre.'", apellidos="'.$jug->apellidos.'", edad='.$jug->edad.', sexo="'.$jug->sexo.'" WHERE id = "'.$id.'";');
     }
+   
     
 }
 

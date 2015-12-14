@@ -7,15 +7,8 @@ if ($_GET['nuevo'] == 1){
 }
 
 if ($_GET['s'] == 'down') {
-/*
-    $db = new Database();
-    $res=$db->actualizarUsuario($_SESSION['jugador']->id,$_SESSION['jugador']->nombre,$_SESSION['jugador']->apellidos,
-    $_SESSION['jugador']->edad,$_SESSION['jugador']->sexo,$_SESSION['jugador']->puntos);
-*/
-    //if(count($res)!=0){
         session_destroy();
         header('Location: login.php');
-    //}
     
 } else {
     if ($_POST['nombre']) {
