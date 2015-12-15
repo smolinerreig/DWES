@@ -15,6 +15,12 @@
                         <p class="well error"><strong>Tu nombre de usuario no existe.<br> Puedes crear uno mediante el siguiente formulario.</strong></p>
                     </div>
                 </div>
+                <?php }else if($_GET['error']==2){ ?>
+                 <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="well error"><strong>El nombre que has escogido ya existe.<br>Búscate otro, copión.</strong></p>
+                    </div>
+                </div>
                 <?php } ?>
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -55,7 +61,6 @@
                                 <button type="button" class="btn btn-warning btn-lg" action="index.php" onclick="window.history.back();">Volver atrás</button>
                             </div>
                         </div>
-                    
                     </div>
                 </form>
             </div>

@@ -20,10 +20,9 @@ h1 {
     color:#009966;
 }
 body{
-    background-image: url("http://hdwallpapersfit.com/wp-content/uploads/2015/04/dice-wallpaper-hd.jpg");
-    background-repeat: repeat-y;
-    background-size: 100%;
-    background-color: #cccccc;
+    background: #39333a;
+    background-image: url("../img/ZenBG-1.png"), url("../img/ZenBG-2.png");
+    background-repeat: repeat-x, repeat;
 }
 img{
     width:100%;
@@ -35,6 +34,10 @@ img{
 
 .error{
     color: red;
+}
+
+.texto-blanco{
+    color:white;
 }
 
 .valign-wrapper{
