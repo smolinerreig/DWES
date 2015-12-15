@@ -53,12 +53,16 @@ $menu = array(
 
 <div class="row">
     <div class="col-md-6">
-        <div>Hola, <strong><?php echo $_SESSION['jugador']->nombre; ?></strong> | Puntos: <strong><?php echo $_SESSION['jugador']->puntuacion; ?></strong></div>
+        <div class="row">
+            <div class="col-md-12">
+                Hola, <strong><?php echo $_SESSION['jugador']->nombre; ?></strong> | Puntos: <strong><?php echo $_SESSION['jugador']->puntuacion; ?></strong>
+            </div>
+        </div>
     </div>
     <div class="col-md-6 hidden-xs hidden-sm">
         <div class="pull-right">
-            <a href="?lang=sp"><img class="icono" src="https://mothsoundspain.files.wordpress.com/2015/04/spanish_icon.gif"></a>
-            <a href="?lang=en"><img class="icono" src="http://www.itanets.co.uk/images/uk_icon.jpg"></a>
+            <a href="?lang=sp"><img class="icono" src="img/iconos/sp.png"></a>
+            <a href="?lang=en"><img class="icono" src="img/iconos/en.png"></a>
         </div>
     </div>
     <div class="col-md-12">

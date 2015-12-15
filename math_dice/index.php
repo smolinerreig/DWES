@@ -19,7 +19,7 @@ if ($_GET['s'] == 'down') {
             $jugador = new Jugador($jug['id'], $jug['nombre'], $jug['apellidos'], $jug['edad'], $jug['puntos'], $jug['sexo']);
             $_SESSION['jugador'] = $jugador;
         }else{
-            header('Location: nuevo_usuario.php');
+            header('Location: nuevo_usuario.php?error=1');
         }
 
     } else {

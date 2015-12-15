@@ -9,9 +9,16 @@
         </div>
         <div class="col-md-6 col-md-offset-3 col-xs-12">
             <div class="well fondo-negro">
+                <?php if($_GET['error']==1){ ?>
+                 <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="well error"><strong>Tu nombre de usuario no existe.<br> Puedes crear uno mediante el siguiente formulario.</strong></p>
+                    </div>
+                </div>
+                <?php } ?>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h4 class="error">NUEVO USUARIO</h4>
+                        <h4 >NUEVO USUARIO</h4>
                     </div>
                 </div>
                 <form enctype="multipart/form-data" action="index.php?nuevo=1" method="POST">
@@ -40,7 +47,15 @@
                             Mujer
                           </label>
                         </div> 
-                        <div class="text-center"><button type="submit" class="btn btn-success btn-lg" action="index.php?nuevo=1">Guardar datos</button></div>
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                <button type="submit" class="btn btn-success btn-lg" action="index.php?nuevo=1">Guardar datos</button>
+                            </div>
+                            <div class="col-md-6 text-lef">
+                                <button type="button" class="btn btn-warning btn-lg" action="index.php" onclick="window.history.back();">Volver atrás</button>
+                            </div>
+                        </div>
+                    
                     </div>
                 </form>
             </div>

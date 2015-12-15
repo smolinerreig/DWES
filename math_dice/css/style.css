@@ -86,3 +86,7 @@ img{
 .error {
     color: #ff0000;
 }
+
+.valign-wrapper {
+     vertical-align: middle;
+}

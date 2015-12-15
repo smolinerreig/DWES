@@ -1,15 +1,10 @@
-<?php
-include 'parciales/include.php';
-?>
-<?php /*echo '<pre>';
-print_r($_SESSION['jugador']);
-exit;*/ ?>
+<?php include 'parciales/include.php'; ?>
+
 <?php if ($_POST['nombre'] && $_POST['apellidos'] && $_POST['edad'] && $_POST['sexo']) {
     $_SESSION['jugador']->nombre = $_POST['nombre'];
     $_SESSION['jugador']->apellidos = $_POST['apellidos'];
     $_SESSION['jugador']->edad = $_POST['edad'];
     $_SESSION['jugador']->sexo = $_POST['sexo'];
-    
     $db = new Database();
     $db->actualizarDatosUsuario($_SESSION['jugador']->id); 
 }
@@ -18,9 +13,7 @@ exit;*/ ?>
     <?php include 'parciales/head.php'; ?>
     <body>
         <div class="container">
-            <?php
-            require_once 'parciales/menu.php';
-            ?>
+            <?php require_once 'parciales/menu.php'; ?>
             <div class="row">
                 <div class="col-md-6">
                     <div class="well fondo-negro">
@@ -50,7 +43,10 @@ exit;*/ ?>
                                         Mujer
                                     </label>
                                 </div> 
-                                <div class="text-center"><button type="submit" class="btn btn-success btn-lg" action="datos.php">Cambiar datos</button></div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-success btn-lg" action="datos.php">Cambiar datos</button>
+                                    <button type="button" class="btn btn-warning btn-lg" action="index.php" onclick="window.history.back();">Volver atrás</button>
+                                </div>
                             </div>
                         </form>
                     </div>
