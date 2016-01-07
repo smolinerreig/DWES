@@ -7,8 +7,11 @@ and open the template in the editor.
     Created on : 21-oct-2015, 21:41:20
     Author     : samuel
 */
-* {
+body {
     font-family: 'Montserrat', sans-serif;
+    background: #39333a;
+    background-image: url("../img/ZenBG-1.png"), url("../img/ZenBG-2.png");
+    background-repeat: repeat-x, repeat;
 }
 .navbar-brand {
     font-family: 'Indie Flower', cursive;
@@ -19,11 +22,7 @@ h1 {
     font-size: 4em;
     color:#009966;
 }
-body{
-    background: #39333a;
-    background-image: url("../img/ZenBG-1.png"), url("../img/ZenBG-2.png");
-    background-repeat: repeat-x, repeat;
-}
+
 img{
     width:100%;
 }
@@ -81,6 +80,7 @@ img{
 }
 
 .well.fondo-negro{
+    padding-top:5px;
     background-color:#222;
     border-color: #080808;
     color:white;

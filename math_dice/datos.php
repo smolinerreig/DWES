@@ -9,6 +9,13 @@
     $db->actualizarDatosUsuario($_SESSION['jugador']->id); 
 }
 ?>
+
+<?php if ($_POST['pass1']==$_POST['pass2'] && $_SESSION['jugador']->password==sha1($_POST['pass0'])) {
+    $_SESSION['jugador']->password = sha1($_POST['pass1']);
+    $db = new Database();
+    $db->actualizarDatosUsuario($_SESSION['jugador']->id); 
+}
+?>
 <html>
     <?php include 'parciales/head.php'; ?>
     <body>
@@ -17,7 +24,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="well fondo-negro">
-                        <form enctype="multipart/form-data" action="datos.php" method="POST">
+                        <h2>DATOS DE USUARIO</h2>
+                        <form enctype="multipart/form-data" action="datos.php?exito=1" method="POST">
                             <div>
                                 <div class="form-group">
                                     <label for="num1">Nombre</label>
@@ -47,6 +55,8 @@
                                     <button type="submit" class="btn btn-success btn-lg" action="datos.php">Cambiar datos</button>
                                     <button type="button" class="btn btn-warning btn-lg" action="index.php" onclick="window.history.back();">Volver atrás</button>
                                 </div>
+                                <br>
+                                <a class="pull-right" href="cambio_psw.php">¿Quieres cambiar tu contraseña?</a>
                             </div>
                         </form>
                     </div>

@@ -52,14 +52,21 @@
                             <input type="radio" name="sexo" id="mujer" value="Mujer">
                             Mujer
                           </label>
-                        </div> 
+                        </div>
+                        <div class="form-group">
+                            <label for="num2">Contraseña</label>
+                            <input type="password" name="pass1" class="form-control" id="pass1">
+                        </div>
+                        <div class="form-group">
+                            <label for="num2">Repite la contraseña</label>
+                            <input type="password" name="pass2" class="form-control" id="pass2">
+                        </div>
                         <div class="row">
-                            <div class="col-md-6 text-right">
+                            <div class="col-md-12 text-center">
                                 <button type="submit" class="btn btn-success btn-lg" action="index.php?nuevo=1">Guardar datos</button>
-                            </div>
-                            <div class="col-md-6 text-lef">
                                 <button type="button" class="btn btn-warning btn-lg" action="index.php" onclick="window.history.back();">Volver atrás</button>
                             </div>
+                           
                         </div>
                     </div>
                 </form>

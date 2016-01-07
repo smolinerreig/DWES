@@ -8,14 +8,16 @@ class Jugador {
     public $edad;
     public $puntuacion;
     public $sexo;
+    public $password;
 
-    function __construct($id, $nombre, $apellidos, $edad, $puntuacion, $sexo) {
+    function __construct($id, $nombre, $apellidos, $edad, $puntuacion, $sexo, $password) {
         $this->id=$id;
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->edad = $edad;
         $this->puntuacion = $puntuacion;
         $this->sexo = $sexo;
+        $this->password = $password;
     }
 
     function getNombre() {

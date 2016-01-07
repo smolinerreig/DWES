@@ -27,10 +27,10 @@ class Database {
         return $this->consulta('SELECT * FROM usuario WHERE nombre="'.$nombre.'"')[0];
     }
     
-    function insertarUsuario($nombre, $apellidos, $edad, $sexo){
+    function insertarUsuario($nombre, $apellidos, $edad, $sexo, $password){
         // retorna 1 si todo ha ido bien
-        return $this->conexion->query('INSERT INTO usuario (id, nombre, apellidos, edad, sexo, puntos) 
-        VALUES (NULL, "'.$nombre.'", "'.$apellidos.'", "'.$edad.'", "'.$sexo.'", 0)');
+        return $this->conexion->query('INSERT INTO usuario (id, nombre, apellidos, edad, sexo, puntos, password) 
+        VALUES (NULL, "'.$nombre.'", "'.$apellidos.'", "'.$edad.'", "'.$sexo.'", 0,"'.sha1($password).'")');
     }
     
     function sumarPuntos($id, $punt){
@@ -43,9 +43,8 @@ class Database {
     
     function actualizarDatosUsuario($id){
         $jug = $_SESSION['jugador'];
-        return $this->conexion->query('UPDATE usuario SET nombre ="'.$jug->nombre.'", apellidos="'.$jug->apellidos.'", edad='.$jug->edad.', sexo="'.$jug->sexo.'" WHERE id = "'.$id.'";');
+        return $this->conexion->query('UPDATE usuario SET nombre ="'.$jug->nombre.'", apellidos="'.$jug->apellidos.'", edad='.$jug->edad.', sexo="'.$jug->sexo.'", password="'.$jug->password.'" WHERE id = "'.$id.'";');
     }
-   
     
 }
 
